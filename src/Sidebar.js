@@ -57,8 +57,12 @@ const handleAddChannel = () => {
           
       </div>
 <div className="sidebar__channelsList">
-    {channels.map((channel) => (
-        <SidebarChannel />
+    {channels.map(({id ,channel}) => (
+        <SidebarChannel 
+        key={id} 
+        id={id}
+        channelName={channel.channelName}
+        />
     ))}
 </div>  
 </div>
